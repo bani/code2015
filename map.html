@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Fusion Tables layers</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+var map, layer;
+
+function initialize() {
+  var toronto = new google.maps.LatLng(43.7000, -79.4000);
+
+  map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: toronto,
+    zoom: 11
+  });
+
+  layer = new google.maps.FusionTablesLayer({
+    query: {
+      select: 'Location',
+      from: '129exdxgk4fBOlrvpFyj_obmLRaX3PB-0jJDLgIGi'
+    }
+  });
+  layer.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
