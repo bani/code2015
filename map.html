@@ -18,7 +18,7 @@ var map, layer;
 function initialize() {
   var toronto = new google.maps.LatLng(43.7000, -79.4000);
   var url = window.location.href;
-  var wardNum = url.substring(url.indexOf('?ward=') + 6);
+  var wardNum = url.indexOf('?ward=') > 0 ? url.substring(url.indexOf('?ward=') + 6) : 0;
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: toronto,
