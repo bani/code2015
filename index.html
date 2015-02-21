@@ -26,6 +26,8 @@
 			.h_iframe        {position:relative;}
 			.h_iframe .ratio {display:block;width:100%;height:auto;}
 			.h_iframe iframe {position:absolute;top:0;left:0;width:100%; height:100%;}
+			.select          {width:60%;display:inline;}
+			input[type="button"].go {min-width: 0em;width:20%;}
 		</style>
 	</head>
 	<body>
@@ -55,7 +57,14 @@
 						<div class="content">
 							<h3>Age group</h3>
 							<p>People change through their lifetime. Are you creating things for youngsters or elders? Maybe something in between? You can choose an age group from this list:</p>
-							<input type="submit" value="Go" />
+							<select id="age" class="select">
+								<option value="age < 10">Kids</option>
+								<option value="age < 20">Teenagers</option>
+								<option value="age < 35">Young Adults</option>
+								<option value="age < 60" selected>Adults</option>
+								<option value="age older">Seniors</option>
+							</select>
+							<input type="button" value="Go" class="go"/>
 						</div>
 					</section>
 					<section class="feature right">
@@ -63,7 +72,101 @@
 						<div class="content">
 							<h3>Cultural heritage</h3>
 							<p>Toronto is a diverse city. If the products you create can be identified to a certain group, this is your best choice. Select the language that best describes this ancentry:</p>
-							<input type="submit" value="Go" />
+							<select id="language" class="select">
+								<option value="English">English</option>
+								<option value="French">French</option>
+								<option value="Aboriginal">Aboriginal</option>
+								<option value="African languages, n.i.e.">African languages, n.i.e.</option>
+								<option value="Afrikaans">Afrikaans</option>
+								<option value="Akan (Twi)">Akan (Twi)</option>
+								<option value="Albanian">Albanian</option>
+								<option value="Amharic">Amharic</option>
+								<option value="Arabic">Arabic</option>
+								<option value="Armenian">Armenian</option>
+								<option value="Bantu languages, n.i.e.">Bantu languages, n.i.e.</option>
+								<option value="Bengali">Bengali</option>
+								<option value="Berber languages (Kabyle)">Berber languages (Kabyle)</option>
+								<option value="Bisayan languages">Bisayan languages</option>
+								<option value="Bosnian">Bosnian</option>
+								<option value="Bulgarian">Bulgarian</option>
+								<option value="Burmese">Burmese</option>
+								<option value="Cantonese">Cantonese</option>
+								<option value="Chinese, n.o.s.">Chinese, n.o.s.</option>
+								<option value="Creoles">Creoles</option>
+								<option value="Croatian">Croatian</option>
+								<option value="Czech">Czech</option>
+								<option value="Danish">Danish</option>
+								<option value="Dutch">Dutch</option>
+								<option value="Estonian">Estonian</option>
+								<option value="Finnish">Finnish</option>
+								<option value="Flemish">Flemish</option>
+								<option value="Fukien">Fukien</option>
+								<option value="German">German</option>
+								<option value="Greek">Greek</option>
+								<option value="Gujarati">Gujarati</option>
+								<option value="Hakka">Hakka</option>
+								<option value="Hebrew">Hebrew</option>
+								<option value="Hindi">Hindi</option>
+								<option value="Hungarian">Hungarian</option>
+								<option value="Ilocano">Ilocano</option>
+								<option value="Indo-Iranian languages, n.i.e.">Indo-Iranian languages, n.i.e.</option>
+								<option value="Italian">Italian</option>
+								<option value="Japanese">Japanese</option>
+								<option value="Khmer (Cambodian)">Khmer (Cambodian)</option>
+								<option value="Korean">Korean</option>
+								<option value="Kurdish">Kurdish</option>
+								<option value="Lao">Lao</option>
+								<option value="Latvian">Latvian</option>
+								<option value="Lingala">Lingala</option>
+								<option value="Lithuanian">Lithuanian</option>
+								<option value="Macedonian">Macedonian</option>
+								<option value="Malay">Malay</option>
+								<option value="Malayalam">Malayalam</option>
+								<option value="Maltese">Maltese</option>
+								<option value="Mandarin">Mandarin</option>
+								<option value="Marathi">Marathi</option>
+								<option value="Nepali">Nepali</option>
+								<option value="Niger-Congo languages, n.i.e.">Niger-Congo languages, n.i.e.</option>
+								<option value="Norwegian">Norwegian</option>
+								<option value="Oromo">Oromo</option>
+								<option value="Panjabi (Punjabi)">Panjabi (Punjabi)</option>
+								<option value="Pashto">Pashto</option>
+								<option value="Persian (Farsi)">Persian (Farsi)</option>
+								<option value="Polish">Polish</option>
+								<option value="Portuguese">Portuguese</option>
+								<option value="Romanian">Romanian</option>
+								<option value="Rundi (Kirundi)">Rundi (Kirundi)</option>
+								<option value="Russian">Russian</option>
+								<option value="Rwanda (Kinyarwanda)">Rwanda (Kinyarwanda)</option>
+								<option value="Semitic languages, n.i.e.">Semitic languages, n.i.e.</option>
+								<option value="Serbian">Serbian</option>
+								<option value="Serbo-Croatian">Serbo-Croatian</option>
+								<option value="Shanghainese">Shanghainese</option>
+								<option value="Sign languages, n.i.e.">Sign languages, n.i.e.</option>
+								<option value="Sindhi">Sindhi</option>
+								<option value="Sinhala (Sinhalese)">Sinhala (Sinhalese)</option>
+								<option value="Sino-Tibetan languages, n.i.e.">Sino-Tibetan languages, n.i.e.</option>
+								<option value="Slavic languages, n.i.e.">Slavic languages, n.i.e.</option>
+								<option value="Slovak">Slovak</option>
+								<option value="Slovenian">Slovenian</option>
+								<option value="Somali">Somali</option>
+								<option value="Spanish">Spanish</option>
+								<option value="Swahili">Swahili</option>
+								<option value="Swedish">Swedish</option>
+								<option value="Tagalog (Pilipino, Filipino)">Tagalog (Pilipino, Filipino)</option>
+								<option value="Taiwanese">Taiwanese</option>
+								<option value="Tamil">Tamil</option>
+								<option value="Telugu">Telugu</option>
+								<option value="Thai">Thai</option>
+								<option value="Tibetan languages">Tibetan languages</option>
+								<option value="Tigrigna">Tigrigna</option>
+								<option value="Turkish">Turkish</option>
+								<option value="Ukrainian">Ukrainian</option>
+								<option value="Urdu">Urdu</option>
+								<option value="Vietnamese">Vietnamese</option>
+								<option value="Yiddish">Yiddish</option>
+							</select>
+							<input type="button" value="Go" class="go"/>
 						</div>
 					</section>
 					<section class="feature left">
@@ -77,6 +180,7 @@
 				</div>
 
 				<div class="box container">
+					<a name="result"></a>
 					<header>
 						<h2>You can connect to a community at:</h2>
 					</header>
@@ -111,31 +215,7 @@
 										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
 										<td>29.99</td>
 									</tr>
-									<tr>
-										<td>24524</td>
-										<td>Nothing</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>45815</td>
-										<td>Something</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>24524</td>
-										<td>Nothing</td>
-										<td>Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</td>
-										<td>19.99</td>
-									</tr>
 								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="3"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
 							</table>
 						</div>
 					</section>
