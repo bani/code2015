@@ -162,6 +162,7 @@ function showWard(criteria, selected) {
     row = "<tr><td>Ward " + criteria[selected][i] + "</td><td>" + ward[criteria[selected][i]] + "</td></tr>";
     $("#wards > tbody").append(row);
   }
+  $("#top5").toggle()
 }
 
 $(document).ready(function(){
