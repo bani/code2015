@@ -12,7 +12,7 @@ def rank(filename):
 def percentage_and_transpose(d):
     headers = list(d.fieldnames)
     headers.remove('total')
-    headers.remove('Ward')
+    headers.remove('Province')
 
     targets = {}
     for key in headers:
@@ -21,7 +21,7 @@ def percentage_and_transpose(d):
     for row in d:
         total = float(row['total'])
         for k in headers:
-            targets[k][row['Ward']] = int(row[k])/total
+            targets[k][row['Province']] = int(row[k])/total
 
     for key in headers:
         targets[key] = OrderedDict(sorted(targets[key].items(), key=lambda t: -t[1])).keys()
@@ -29,5 +29,5 @@ def percentage_and_transpose(d):
     return targets
 
 if __name__ == "__main__":
-    rank('census-age-group')
-    rank('census-mother-tongue')
+    rank('province-age-group')
+    rank('province-mother-tongue')
