@@ -29,7 +29,7 @@ function initialize() {
     query: {
       select: 'Location',
       from: '129exdxgk4fBOlrvpFyj_obmLRaX3PB-0jJDLgIGi',
-      where: 'Ward = ' + wardNum
+      where: 'Ward in (' + wardNum + ')'
     }
   });
   layer.setMap(map);

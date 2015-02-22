@@ -153,16 +153,16 @@ lang = {
 };
 
 function showWard(criteria, selected) {
-  topWard = criteria[selected][0];
+  topWards = criteria[selected].slice(0,5).toString();
   $("#wards > tbody").html("");
   location.hash = "#tmp";
   location.hash = "#result";
-  $( "#map" ).attr('src', "map.html?ward=" + topWard);
+  $( "#map" ).attr('src', "map.html?ward=" + topWards);
   for (i = 0; i < 5; i++) { 
     row = "<tr><td>Ward " + criteria[selected][i] + "</td><td>" + ward[criteria[selected][i]] + "</td></tr>";
     $("#wards > tbody").append(row);
   }
-  $("#top5").toggle()
+  $("#top5").show()
 }
 
 $(document).ready(function(){
