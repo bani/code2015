@@ -163,6 +163,7 @@ function showWard(criteria, selected) {
     $("#wards > tbody").append(row);
   }
   $("#top5").show()
+  $("#provinces").show()
 }
 
 $(document).ready(function(){

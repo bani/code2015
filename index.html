@@ -30,6 +30,7 @@
 			.select          {width:60%;display:inline;}
 			input[type="button"].go {min-width: 0em;width:20%;}
 			#top5            {display:none;}
+			#provinces       {display:none;}
 		</style>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -214,7 +215,8 @@
 						</div>
 					</section>
 					<section>
-						<p>The following spaces were compiled by the City of Toronto as available for exhibitions or other cultural purposes. Click on any marker on the map to see name and address.</p>
+						<p>The following spaces were compiled by the City of Toronto as available for exhibitions or other cultural purposes. This means you can try to rent the space to showcase your creations!<br/>
+						Click on any marker on the map to see name and address.</p>
 						<div class="wrapper">
 							<div class="h_iframe">
 								<!-- a transparent image is preferable -->
@@ -222,15 +224,19 @@
 								<iframe id="map" src="map.html" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
+						<p>And don't forget to use the <a href="http://www1.toronto.ca/City%20Of%20Toronto/Municipal%20Licensing%20&%20Standards/1-Files/Toronto%20poster%20column%20locations%20-%20August%202014.pdf">public message boards</a> around that neighbourhood to let everyone know about it.</p>
 					</section>
 				</div>
 
-				<footer class="major container 75%">
+				<footer id="provinces" class="major container 75%">
 					<h3>Ready to go National?</h3>
-					<p>Check this data from Canada:</p>
-					<ul class="actions">
-						<li><a href="#" class="button">Open Data</a></li>
-					</ul>
+					<p>Here is how the Canadian provinces rank against the criteria that you selected:</p>
+					<div class="table-wrapper">
+						<table id="provinces" class="default">
+							<tbody>
+							</tbody>
+						</table>
+					</div>
 				</footer>
 
 			</div>
@@ -244,7 +250,7 @@
 					</header>
 
 					<p>City of Toronto: <a href="http://www.toronto.ca/makingspace">Cultural Spaces</a> | <a href="http://www.toronto.ca/wardprofiles">Ward Profiles</a><br />
-						Canadian Government: ???
+						Canadian Government: <a href="http://open.canada.ca/data/en/dataset/2775ad9a-8a68-4455-bf88-7b05d7ef6f87">Census Profile 2011</a>
 					</p>
 
 					<ul class="icons">
